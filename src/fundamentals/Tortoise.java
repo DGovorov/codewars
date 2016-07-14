@@ -30,11 +30,9 @@ public class Tortoise {
         return toTimeArray(timeToCatchUp);
     }
 
-    private static int[] toTimeArray(Float hours) {
-        int integerPart = hours.intValue();
-        float floatPart = hours - integerPart;
-        
-        int h = integerPart;
+    private static int[] toTimeArray(float hours) {
+        int h = (int) hours;
+        float floatPart = hours - (int) hours;
         float floatPartInSeconds = floatPart * 3600;
         int time = (int) floatPartInSeconds;
         int mn = time % 3600 / 60;
