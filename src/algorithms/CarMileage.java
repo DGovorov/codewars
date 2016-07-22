@@ -70,8 +70,8 @@ public class CarMileage {
         if (number < 98) {
             return false;
         }
-        List<Integer> plusOneDigits = getDigits(number + 1L);
-        List<Integer> plusTwoDigits = getDigits(number + 2L);
+        List<Integer> plusOneDigits = getDigits(number + 1);
+        List<Integer> plusTwoDigits = getDigits(number + 2);
         return isFollowedByZeros(plusOneDigits)
                 || isFollowedByZeros(plusTwoDigits)
                 || isMadeOfSingleDigit(plusOneDigits)
@@ -86,7 +86,7 @@ public class CarMileage {
                 || isAwesomePhrase(number + 2, awesomePhrases);
     }
 
-    private static List<Integer> getDigits(long number) {
+    private static List<Integer> getDigits(int number) {
         List<Integer> digits = new ArrayList<>();
         while (number > 0) {
             int digit = (int) number % 10;
