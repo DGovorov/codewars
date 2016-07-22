@@ -89,7 +89,7 @@ public class CarMileage {
     private static List<Integer> getDigits(int number) {
         List<Integer> digits = new ArrayList<>();
         while (number > 0) {
-            int digit = (int) number % 10;
+            int digit = number % 10;
             digits.add(digit);
             number /= 10;
         }
