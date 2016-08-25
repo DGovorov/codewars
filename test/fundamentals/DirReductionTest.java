@@ -1,4 +1,4 @@
-package mathematics;
+package fundamentals;
 
 import org.junit.Test;
 import static org.junit.Assert.assertEquals;
